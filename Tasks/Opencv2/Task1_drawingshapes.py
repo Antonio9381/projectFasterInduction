@@ -13,6 +13,9 @@ def main():
     poly = np.array([[300, 150], [400, 150], [450, 250], [350, 250]], np.int32)
     cv.polylines(img, [poly], isClosed=True, color=(255, 255, 0), thickness=2)
 
+    cv.putText(img, "Antonio", (50, 50), cv.FONT_HERSHEY_DUPLEX, 1, (255, 255, 255), thickness=2)
+    cv.putText(img, "king", (0, 400), cv.FONT_ITALIC, 2, (0, 255, 255), thickness=2)
+
     cv.imshow("Shapes", img)
     cv.waitKey(0)
 
