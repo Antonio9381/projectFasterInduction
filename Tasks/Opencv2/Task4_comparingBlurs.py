@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 def main():
     img = cv.imread('./Tasks/Opencv2/img/backyard.png')
+    
     img_reg_blur = cv.blur(img, (50, 50))
     img_gaussian_blur = cv.GaussianBlur(img, (55, 55), 0, 0)
     img_median_blur = cv.medianBlur(img, 15)
@@ -39,7 +40,7 @@ def main():
     plt.xticks([ ])
     plt.yticks([ ])
     plt.title("original")
-    
+
     plt.tight_layout()
     plt.show()
 
