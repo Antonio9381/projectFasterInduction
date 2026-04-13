@@ -8,7 +8,7 @@ def main():
         if not ret:
             break
 
-        blurred_frame = cv.bilateralFilter(frame, 15, 50, 50)
+        blurred_frame = cv.blur(frame, (50, 50))
 
         cv.imshow("Blurred Video", blurred_frame)
 
