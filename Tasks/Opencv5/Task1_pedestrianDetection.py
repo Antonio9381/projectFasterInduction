@@ -1,6 +1,8 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 
+import Task2_faceDetectionHaar as task
+
 def main():
     cap = cv.VideoCapture("./Tasks/Opencv5/vids/siJingPingEyes.mp4")
 
@@ -40,3 +42,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    task.issac()
