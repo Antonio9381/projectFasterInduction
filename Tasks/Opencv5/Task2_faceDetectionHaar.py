@@ -11,7 +11,9 @@ def HaarFaceDetection(img, scaleFactor = 1.1, neighbors = 5, minSize = (60, 60))
     
     face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
     faces = face_cascade.detectMultiScale(img_prep, scaleFactor=scaleFactor, minNeighbors=neighbors, minSize=minSize)
-    print('Faces found: ', len(faces))
+
+    print('faces found: ', len(faces))
+
     for (x, y, w, h) in faces:
         cv.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
     return img
@@ -21,7 +23,7 @@ def main():
 
     img_faced = HaarFaceDetection(img, scaleFactor=1.04, neighbors=5, minSize=(20, 20))
 
-    cv.imshow('Face Detection', img_faced)
+    cv.imshow('face', img_faced)
 
     cv.waitKey(0)
     cv.destroyAllWindows()
@@ -37,7 +39,7 @@ def main():
 
         frame_faced = cv.resize(frame_faced, (0, 0), fx=0.5, fy=0.5)
 
-        cv.imshow('Face Detection', frame_faced)
+        cv.imshow('face', frame_faced)
 
         if cv.waitKey(1) & 0xFF == ord('q'):
             break

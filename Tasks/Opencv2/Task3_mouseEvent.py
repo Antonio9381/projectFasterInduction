@@ -41,19 +41,19 @@ def main() -> None:
 
     blank = np.zeros((720, 720, 3), dtype=np.uint8)
  
-    cv.namedWindow("Image")
-    cv.setMouseCallback("Image", draw_rectangle, param=(blank)) 
+    cv.namedWindow("img")
+    cv.setMouseCallback("img", draw_rectangle, param=(blank)) 
  
     while True: 
-        cv.imshow("Image", blank) 
+        cv.imshow("img", blank) 
         key = cv.waitKey(1) 
  
         if key == ord('r'):
             shape = "rectangle"
-            print("Shape: rectangle")
+            print("rectangle")
         elif key == ord('l'):
             shape = "line"
-            print("Shape: line")
+            print("line")
         elif key == ord('d'):
             break
     

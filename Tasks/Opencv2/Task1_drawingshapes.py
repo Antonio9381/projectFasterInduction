@@ -16,7 +16,7 @@ def main():
     cv.putText(img, "Antonio", (50, 50), cv.FONT_HERSHEY_DUPLEX, 1, (255, 255, 255), thickness=2)
     cv.putText(img, "king", (0, 400), cv.FONT_ITALIC, 2, (0, 255, 255), thickness=2)
 
-    cv.imshow("Shapes", img)
+    cv.imshow("shapes", img)
     cv.waitKey(0)
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ def main():
 
         blurred_frame = cv.blur(frame, (50, 50))
 
-        cv.imshow("Blurred Video", blurred_frame)
+        cv.imshow("blurred vid", blurred_frame)
 
         if cv.waitKey(7) & 0xFF == ord('q'):
             break

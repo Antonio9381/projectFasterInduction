@@ -9,7 +9,7 @@ def main():
     
     img_col_thresholded_doc = cv.inRange(img, (15, 100, 100), (35, 255, 255))
 
-    cv.imshow("Color Thresholded Image", img_col_thresholded_doc)
+    cv.imshow("color threshold", img_col_thresholded_doc)
 
     cv.waitKey(0)
     cv.destroyAllWindows()
