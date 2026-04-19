@@ -1,15 +1,11 @@
 import cv2 as cv 
 import numpy as np 
  
-x0, y0 = None, None         # The initial coordinates of the moues event 
+x0, y0 = None, None
 drawing = False 
 shape = "rectangle"
  
-def draw_rectangle(event, x, y, flags, *params) -> None: 
-    """ 
-    Mouse event handling function. 
-    Draws a rectangle on mouse event. 
-    """ 
+def draw_rectangle(event, x, y, *params) -> None: 
     global x0, y0, drawing 
  
     image, = params                         # Unpack params tuple 

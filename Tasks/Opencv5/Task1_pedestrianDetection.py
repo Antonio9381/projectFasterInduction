@@ -27,12 +27,16 @@ def main():
         cnt, _ = cv.findContours(img_open, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
         for i in cnt:
+            area = cv.contourArea(i)
+            if area < 500:
+                continue
+
             x,y,w,h = cv.boundingRect(i)
             cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         cv.imshow('Pedestrian Detection', frame)
 
-        if cv.waitKey(1) & 0xFF == ord('q'):
+        if cv.waitKey(10) & 0xFF == ord('q'):
             break
 
     cap.release()

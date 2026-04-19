@@ -10,9 +10,8 @@ def rescale(frame: cv.Mat, scale: float) -> cv.Mat:
 capture = cv.VideoCapture("./Tasks/Opencv1/videos/Gandalf_laugh.mp4") 
 
 while True: 
-    retval, frame = capture.read()     # retval is bool for successful read 
+    retval, frame = capture.read()
 
-    # Exit loop once end of the video is reached 
     if not retval: 
         break 
 

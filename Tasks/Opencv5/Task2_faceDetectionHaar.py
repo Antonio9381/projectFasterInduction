@@ -41,7 +41,7 @@ def main():
 
         cv.imshow('face', frame_faced)
 
-        if cv.waitKey(1) & 0xFF == ord('q'):
+        if cv.waitKey(18) & 0xFF == ord('q'):
             break
 
     cap.release()
